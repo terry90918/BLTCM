@@ -1,7 +1,7 @@
 {
   "name": "BLTCM",
   "version": "0.1.0",
-  "description": "",
+  "description": "BLTCM",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
