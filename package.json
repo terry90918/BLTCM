@@ -16,8 +16,28 @@
   "files": [
     "dist"
   ],
-
-  "author": "You github Name <> ()",
+  "contributors": [
+    {
+      "name": "Terry Chen",
+      "email": "zxtw17985321@gmail.com"
+    },
+    {
+      "name": "Charles Tsai",
+      "email": "gastbyylion@gmail.com"
+    },
+    {
+      "name": "May",
+      "email": "mmi3366tw@gmail.com"
+    },
+    {
+      "name": "Lina Chen",
+      "email": "sakura0477@gmail.com"
+    },
+    {
+      "name": "Bumble",
+      "email": "nick1092387456@gmail.com"
+    }
+  ],
   "license": "MIT",
   "repository": {
     "type": "git",
