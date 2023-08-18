@@ -41,13 +41,13 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+"
+    "url": "git+https://github.com/terry90918/BLTCM"
   },
   "bugs": {
-    "url": ""
+    "url": "https://github.com/terry90918/BLTCM/issues"
   },
-  "homepage": "",
-  "keywords": [],
+  "homepage": "https://github.com/terry90918/BLTCM",
+  "keywords": ["BLTCM"],
   "dependencies": {
     "vue": "^3.3.4"
   },
