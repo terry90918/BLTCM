@@ -8,9 +8,7 @@
   </head>
   <body>
     <div id="app">
-      <div style="width: 500px; margin: 20px">
-        <Bl-dropdown></Bl-dropdown>
-      </div>
+      <Bl-dropdown :list="list" :selected-width="30"></Bl-dropdown>
     </div>
     <script type="importmap">
       {
@@ -27,14 +25,11 @@
           BlDropdown,
         },
         setup() {
-          const message = ref("");
-
-          const options = {
-            suffix: ["@gmail.com", "@hotmail.com", "@yahoo.com"],
-          };
+          const list = [
+            'Night Bright', 'Dracula', 'Dracula'
+          ]
           return {
-            message,
-            options,
+            list
           };
         },
       }).mount("#app");

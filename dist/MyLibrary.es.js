@@ -1,34 +1,42 @@
-import { ref as v, openBlock as s, createElementBlock as _, toDisplayString as a, pushScopeId as h, popScopeId as m, createElementVNode as c, Fragment as i, withDirectives as f, vModelText as b, renderList as g } from "vue";
-const d = (e, t) => {
-  const o = e.__vccOpts || e;
-  for (const [l, n] of t)
-    o[l] = n;
-  return o;
-}, x = {
+import { ref as f, openBlock as o, createElementBlock as n, toDisplayString as p, normalizeStyle as m, Fragment as c, renderList as u, withDirectives as v, createElementVNode as d, vModelText as y } from "vue";
+const a = (e, t) => {
+  const s = e.__vccOpts || e;
+  for (const [l, r] of t)
+    s[l] = r;
+  return s;
+}, h = {
   __name: "HelloWorld",
   setup(e) {
-    const t = v(0), o = () => {
+    const t = f(0), s = () => {
       t.value++;
     };
-    return (l, n) => (s(), _("button", {
+    return (l, r) => (o(), n("button", {
       type: "button",
-      onClick: o
-    }, "count is " + a(t.value), 1));
+      onClick: s
+    }, "count is " + p(t.value), 1));
   }
-}, T = /* @__PURE__ */ d(x, [["__scopeId", "data-v-4a27bb39"]]);
-const y = {}, p = (e) => (h("data-v-cfd4b654"), e = e(), m(), e), w = {
-  name: "",
-  id: ""
-}, D = /* @__PURE__ */ p(() => /* @__PURE__ */ c("option", { value: "" }, "1", -1)), B = /* @__PURE__ */ p(() => /* @__PURE__ */ c("option", { value: "" }, "2", -1)), I = /* @__PURE__ */ p(() => /* @__PURE__ */ c("option", { value: "" }, "3", -1)), L = [
-  D,
-  B,
-  I
-];
-function S(e, t) {
-  return s(), _("select", w, L);
-}
-const E = /* @__PURE__ */ d(y, [["render", S], ["__scopeId", "data-v-cfd4b654"]]);
-const $ = {
+}, L = /* @__PURE__ */ a(h, [["__scopeId", "data-v-8afefce5"]]);
+const g = {
+  __name: "BLDropdown",
+  props: {
+    list: {
+      type: Array,
+      default: () => []
+    },
+    selectedWidth: {
+      type: Number,
+      default: 10
+    }
+  },
+  setup(e) {
+    return (t, s) => (o(), n("select", {
+      style: m(`width: ${e.selectedWidth}%;`)
+    }, [
+      (o(!0), n(c, null, u(e.list, (l) => (o(), n("option", { key: l }, p(l), 1))), 128))
+    ], 4));
+  }
+}, W = /* @__PURE__ */ a(g, [["__scopeId", "data-v-2f4b7c98"]]);
+const x = {
   name: "Select",
   props: {
     "t-drop": Boolean
@@ -45,23 +53,23 @@ const $ = {
       return this.something ? e = this.list.filters((t) => t.indexOf(this.something) !== -1) : e = this.list, e;
     }
   }
-}, k = ["value"];
-function H(e, t, o, l, n, u) {
-  return s(), _(i, null, [
-    f(c("input", {
+}, w = ["value"];
+function D(e, t, s, l, r, i) {
+  return o(), n(c, null, [
+    v(d("input", {
       type: "text",
-      "onUpdate:modelValue": t[0] || (t[0] = (r) => n.something = r)
+      "onUpdate:modelValue": t[0] || (t[0] = (_) => r.something = _)
     }, null, 512), [
-      [b, n.something]
+      [y, r.something]
     ]),
-    c("select", null, [
-      (s(!0), _(i, null, g(u.newList, (r) => (s(), _("option", { value: r }, a(r), 9, k))), 256))
+    d("select", null, [
+      (o(!0), n(c, null, u(i.newList, (_) => (o(), n("option", { value: _ }, p(_), 9, w))), 256))
     ])
   ], 64);
 }
-const O = /* @__PURE__ */ d($, [["render", H], ["__scopeId", "data-v-bdbd70eb"]]);
+const b = /* @__PURE__ */ a(x, [["render", D], ["__scopeId", "data-v-999a2393"]]);
 export {
-  E as BlDropdown,
-  T as HelloWord,
-  O as TDropdown
+  W as BlDropdown,
+  L as HelloWord,
+  b as TDropdown
 };
