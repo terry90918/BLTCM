@@ -1,11 +1,24 @@
 <template>
-    <select name="" id="">
-        <option value="">1</option>
-        <option value="">2</option>
-        <option value="">3</option>
+    <select :style="`width: ${selectedWidth}%;`">
+        <option v-for="item in list" :key="item">
+            {{ item }}
+        </option>
     </select>
 </template>
 
+<script setup>
+const props = defineProps({
+    list: {
+        type: Array,
+        default: () => ([]),
+    },
+    selectedWidth: {
+        type: Number,
+        default: 10
+    }
+})
+
+</script>
 
 <style scoped>
 * {

@@ -1,34 +1,42 @@
-import { ref as l, openBlock as d, createElementBlock as r, toDisplayString as p, pushScopeId as i, popScopeId as u, createElementVNode as _ } from "vue";
-const a = (e, o) => {
-  const t = e.__vccOpts || e;
-  for (const [n, s] of o)
-    t[n] = s;
-  return t;
-}, v = {
+import { ref as a, openBlock as c, createElementBlock as r, toDisplayString as l, normalizeStyle as d, Fragment as p, renderList as u } from "vue";
+const s = (e, t) => {
+  const o = e.__vccOpts || e;
+  for (const [n, _] of t)
+    o[n] = _;
+  return o;
+}, i = {
   __name: "HelloWorld",
   setup(e) {
-    const o = l(0), t = () => {
-      o.value++;
+    const t = a(0), o = () => {
+      t.value++;
     };
-    return (n, s) => (d(), r("button", {
+    return (n, _) => (c(), r("button", {
       type: "button",
-      onClick: t
-    }, "count is " + p(o.value), 1));
+      onClick: o
+    }, "count is " + l(t.value), 1));
   }
-}, k = /* @__PURE__ */ a(v, [["__scopeId", "data-v-8afefce5"]]);
-const f = {}, c = (e) => (i("data-v-8187ec54"), e = e(), u(), e), h = {
-  name: "",
-  id: ""
-}, m = /* @__PURE__ */ c(() => /* @__PURE__ */ _("option", { value: "" }, "1", -1)), y = /* @__PURE__ */ c(() => /* @__PURE__ */ _("option", { value: "" }, "2", -1)), x = /* @__PURE__ */ c(() => /* @__PURE__ */ _("option", { value: "" }, "3", -1)), B = [
-  m,
-  y,
-  x
-];
-function I(e, o) {
-  return d(), r("select", h, B);
-}
-const w = /* @__PURE__ */ a(f, [["render", I], ["__scopeId", "data-v-8187ec54"]]);
+}, v = /* @__PURE__ */ s(i, [["__scopeId", "data-v-8afefce5"]]);
+const f = {
+  __name: "BLDropdown",
+  props: {
+    list: {
+      type: Array,
+      default: () => []
+    },
+    selectedWidth: {
+      type: Number,
+      default: 10
+    }
+  },
+  setup(e) {
+    return (t, o) => (c(), r("select", {
+      style: d(`width: ${e.selectedWidth}%;`)
+    }, [
+      (c(!0), r(p, null, u(e.list, (n) => (c(), r("option", { key: n }, l(n), 1))), 128))
+    ], 4));
+  }
+}, m = /* @__PURE__ */ s(f, [["__scopeId", "data-v-2f4b7c98"]]);
 export {
-  w as BlDropdown,
-  k as HelloWord
+  m as BlDropdown,
+  v as HelloWord
 };
